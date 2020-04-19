@@ -1,0 +1,92 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap');
+
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+
+@keyframes :local(contentAnimation) {
+    from {
+        transform: scale(.9);
+        opacity: .2;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.wrapper {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: contentAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: forwards;
+    animation-delay: 2s;
+}
+
+.main {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgWrapper {
+    position: absolute;
+}
+
+.img {
+    display: block;
+
+    max-width: 600px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+
+    filter: grayscale(1);
+
+    object-fit: cover;
+}
+
+.content {
+    font-size: 7rem;
+
+    line-height: 1;
+    word-break: break-word;
+    text-align: center;
+
+    padding: 10px;
+
+    color: #000;
+    -webkit-text-fill-color: rgba(0,0,0,.5);
+    -webkit-text-stroke: 1px #fff;
+
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 960px) {
+    .content {
+        font-size: 4rem;
+    }
+}
+
+.subtitle {
+    color: #595a5a;
+
+    font-size: 1.4rem;
+    text-align: center;
+
+    max-width: 380px;
+
+    margin-top: 1.6rem;
+}
